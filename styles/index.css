@@ -1,0 +1,228 @@
+@import url(https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans);
+body {
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  margin: 0px;
+  max-width: 100%; }
+  body #principalNav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #FEFFF8;
+    justify-content: space-between;
+    position: fixed;
+    height: 50px;
+   /*
+* Made by Erik Terwan
+* 24th of November 2015
+* All rights reserved
+*
+*
+* If you are thinking of using this in
+* production code, beware of the browser
+* prefixes.
+*/
+    /*
+     * Just a quick hamburger
+     */
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    /*
+     * But let's hide the middle one.
+     */
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    /*
+     * And let's slide it in from the left
+     */ }
+    body #principalNav #menuToggle {
+      padding-left: .5em;
+      display: block;
+      position: relative;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none; }
+    body #principalNav #menuToggle input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0;
+      /* hide this */
+      z-index: 2;
+      /* and place it over the hamburger */
+      -webkit-touch-callout: none; }
+    body #principalNav #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #29241E;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+    body #principalNav z
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%; }
+    body #principalNav #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%; }
+    body #principalNav #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323; }
+    body #principalNav #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2); }
+    body #principalNav #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px); }
+    body #principalNav #menu {
+      position: absolute;
+      width: 300px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+    body #principalNav #menu li {
+      padding: 10px 0;
+      font-size: 22px; }
+    body #principalNav #menuToggle input:checked ~ ul {
+      transform: none; }
+    body #principalNav a {
+      transition: color 0.3s ease; }
+      body #principalNav a:hover {
+        color: tomato; }
+  body h1 {
+    color: #cc0000;
+    font-family: "Open Sans", sans-serif; }
+  body #btnPerfil {
+    color: #232323;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    max-height: 100%;
+    margin-right: .5em;
+    margin-top: 0.2em; }
+    body #btnPerfil img {
+      border-radius: 50%;
+      height: 33px; }
+    body #btnPerfil p {
+      line-height: 0px;
+      margin-top: 6px;
+      font-size: 0.7em;
+      color: #29241E; }
+  body .cajaBuscar {
+    display: flex;
+    padding-top: 55px;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 1%; }
+    body .cajaBuscar input {
+      flex-grow: 8;
+      border: 1px solid #29241E;
+      height: 2.2em;
+      padding-left: 1em;
+      margin-left: 4%; }
+    body .cajaBuscar button {
+      border: none;
+      flex-grow: 1.75;
+      margin-left: 3%;
+      margin-right: 2%;
+      background-color: #FEFFF8;
+      background-image: url(../img/search.png);
+      background-size: 2.2em;
+      background-repeat: no-repeat;
+      background-position: center; }
+
+#contenedorEventos {
+  background-color: #fcffeb;
+  background-image: -webkit-linear-gradient(top, white, #fcffeb 9%);
+  background-image: -moz-linear-gradient(top, white, #fcffeb 9%);
+  background-image: -ms-linear-gradient(top, white, #fcffeb 9%);
+  background-image: -o-linear-gradient(top, white, #fcffeb 9%);
+  background-image: linear-gradient(top, white, #fcffeb 9%); }
+
+#eventosDestacados {
+  height: 2000px;
+  background-image: url(../img/star.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 2em;
+  margin-left: 7%;
+  margin-right: 7%; }
+  #eventosDestacados h2 {
+    padding-left: 1.5em;
+    padding-top: 0.2em; }
+
+.destacado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  width: 100%;
+  border: 0.3em solid #FEFFF8;
+  background-color: #fdfff3; }
+  .destacado img {
+    width: inherit; }
+  .destacado h3 {
+    margin: 0;
+    padding-top: .05em;
+    text-align: left;
+    width: inherit;
+    background-color: #FEFFF8; }
+  .destacado .descripcion {
+    font-size: 1.05em;
+    margin: 0; }
+  .destacado .cajaInformacion {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: .4em;
+    background-color: #fdfff3; }
+    .destacado .cajaInformacion address {
+      max-height: 1.2em;
+      padding-bottom: 0.7em;
+      background-color: #fdfff3; }
+      .destacado .cajaInformacion address::before {
+        content: url(../img/ubicacion.png); }
+    .destacado .cajaInformacion .cuadroCompra {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 1em; }
+      .destacado .cajaInformacion .cuadroCompra p {
+        margin: 0;
+        font-size: .9em;
+        vertical-align: middle; }
+        .destacado .cajaInformacion .cuadroCompra p::before {
+          content: url(../img/calendar.png);
+          margin-right: .5em; }
+      .destacado .cajaInformacion .cuadroCompra button {
+        border: none;
+        background-color: #ea6500;
+        color: #29241E;
+        padding: .4em; }
+        .destacado .cajaInformacion .cuadroCompra button .precio {
+          font-size: 1.4em;
+          font-weight: bold; }
+
+/*# sourceMappingURL=index.css.map */

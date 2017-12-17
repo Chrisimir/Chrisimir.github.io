@@ -1,0 +1,27 @@
+@mixin cajaBusqueda {
+    .cajaBuscar {
+        display: flex;
+        padding-top: 55px;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 1%;
+        input { 
+            flex-grow: 8;
+            border: 1px solid $oscuro;
+            height: 2.2em;
+            padding-left: 1em;
+            margin-left: 4%;
+        }
+        button {
+            border: none;
+            flex-grow: 1.75;
+            margin-left: 3%;
+            margin-right: 2%;
+            background-color: $blanco;
+            background-image: url(#{$rutaImagen}search.png);
+            background-size: 2.2em;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+    }
+}
