@@ -276,11 +276,12 @@ hr {
   margin-left: 7%;
   margin-right: 7%;
   margin-top: 1.7em;
-  margin-bottom: 3em;
+  padding-bottom: .5em;
   background-image: url(../img/forest.png);
   max-width: 83%;
   height: 15em;
-  text-align: center; }
+  text-align: center;
+  height: 100%; }
   #cajaAddEvento .tituloAnuncio {
     font-size: 2em;
     padding-top: 1em;
