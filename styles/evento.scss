@@ -22,6 +22,7 @@ body {
 #evento {
     display: flex;
     flex-direction: column;
+    color: $oscuro;
 }
 
 #tituloEvento {
@@ -29,7 +30,6 @@ body {
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(#{$rutaImagen}concierto-belako.jpg);
     background-position: center top;
-    background-repeat: no-repeat;
     background-size: 100%;
     color: $blanco;
     padding-top: 4em;
@@ -42,4 +42,53 @@ body {
         -1px 1px 0 $oscuro,
         1px 1px 0 $oscuro;
     }
+}
+
+#infoResumida {
+    padding-left: 2em;
+    padding-top: .7em;
+    padding-bottom: .5em;
+    border-radius: 5px;
+    background: $blanco;
+
+    @mixin elementoInformacion($url) {
+        margin-bottom: .5em;
+        &::before {
+          content: url(#{$rutaImagen}#{$url});
+          padding-right: .2em;
+        }
+    }
+
+    .tituloCaja {
+        font-weight: bold;
+        font-size: .9em;
+        padding-bottom: .5em;
+    }
+    #fecha {
+        @include elementoInformacion("calendar.png")
+    }
+    #precio {
+        @include elementoInformacion("euro.png");
+    }
+    #direccion {
+        @include elementoInformacion("ubicacioon.png");
+    }
+}
+
+#descripcion {
+    #tituloDescripcion {
+        font-weight: bold;
+        line-height: 0;
+    }
+    height: 800px;
+    line-height: 1.2em;
+    @include columnaMovil;
+}
+
+#botonComprar {
+    position: -webkit-sticky;  // para Safari    
+    position: sticky;
+    bottom: 0px;
+    
+    width: 100%;
 }

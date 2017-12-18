@@ -196,14 +196,14 @@ body {
 
 #evento {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  color: #29241E; }
 
 #tituloEvento {
   height: 8em;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/concierto-belako.jpg);
   background-position: center top;
-  background-repeat: no-repeat;
   background-size: 100%;
   color: #FEFFF8;
   padding-top: 4em; }
@@ -211,5 +211,46 @@ body {
     color: inherit;
     text-align: center;
     text-shadow: -1px -1px 0 #29241E, 1px -1px 0 #29241E, -1px 1px 0 #29241E, 1px 1px 0 #29241E; }
+
+#infoResumida {
+  padding-left: 2em;
+  padding-top: .7em;
+  padding-bottom: .5em;
+  border-radius: 5px;
+  background: #FEFFF8; }
+  #infoResumida .tituloCaja {
+    font-weight: bold;
+    font-size: .9em;
+    padding-bottom: .5em; }
+  #infoResumida #fecha {
+    margin-bottom: .5em; }
+    #infoResumida #fecha::before {
+      content: url(../img/calendar.png);
+      padding-right: .2em; }
+  #infoResumida #precio {
+    margin-bottom: .5em; }
+    #infoResumida #precio::before {
+      content: url(../img/euro.png);
+      padding-right: .2em; }
+  #infoResumida #direccion {
+    margin-bottom: .5em; }
+    #infoResumida #direccion::before {
+      content: url(../img/ubicacioon.png);
+      padding-right: .2em; }
+
+#descripcion {
+  height: 800px;
+  line-height: 1.2em;
+  margin-left: 7%;
+  margin-right: 7%; }
+  #descripcion #tituloDescripcion {
+    font-weight: bold;
+    line-height: 0; }
+
+#botonComprar {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  width: 100%; }
 
 /*# sourceMappingURL=evento.css.map */
