@@ -1,5 +1,3 @@
-// Poner open sans a titulo
-
 // Variables
 $rutaImagen: "../img/";
 $naranja: #D05A00;
@@ -9,21 +7,23 @@ $blanco: #FEFFF8;
 @import "modules/burger";
 @import "modules/nav";
 @import "modules/cajaBusqueda";
+@import "modules/eventoDestacado";
 
 @mixin roundedImage {
     border-radius: 50%;
 }
-
-body {
-    font-family: "Avenir Next", "Avenir", sans-serif;
-    margin: 0px;
-    max-width: 100%;
-    @include nav;
-    @include cajaBusqueda;
+@mixin imagenInicio($url) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-position: top left; 
+    background-size: 2em;
 }
-
-#contenedorEventos {
-    $blancoOscurecido: darken($blanco, 2.5%);
+@mixin columnaMovil {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+@mixin fondoPincipal {
+    $blancoOscurecido: darken($blanco, 4%);
     background-color: $blancoOscurecido;
     background-image: -webkit-linear-gradient(top, white, $blancoOscurecido 9%);
     background-image: -moz-linear-gradient(top, white, $blancoOscurecido 9%);
@@ -32,87 +32,169 @@ body {
     background-image: linear-gradient(top, white, $blancoOscurecido 9%);
 }
 
-#eventosDestacados {
-    height: 2000px;
-    background-image: url(#{$rutaImagen}star.png);
-    background-repeat: no-repeat;
-    background-position: top left; 
-    background-size: 2em;
-    margin-left: 7%;
-    margin-right: 7%;
+body {
+    color: $oscuro;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    margin: 0px;
+    max-width: 100%;
+    @include nav;
+    @include cajaBusqueda;
+    @include fondoPincipal;
+}
 
-    h2 {
-        padding-left: 1.5em;
-        padding-top: 0.2em;
+.evento {
+    border: 0.02em solid white;
+}
+
+// Título de los tipos de eventos
+h2 {
+    padding-left: 1.5em;
+    padding-top: 0.2em;
+}
+
+hr {
+    width: 88%;
+}
+
+#eventosDestacados {
+    //height: 2000px;
+    @include imagenInicio(url(#{$rutaImagen}star.png));
+    @include columnaMovil;
+    @include eventoDestacado;
+}
+
+#eventosRecomendados {
+    @include imagenInicio(url(#{$rutaImagen}recomendado.png));
+    @include columnaMovil;
+}
+
+#cajaRecomendados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .evento {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-color: rgba( $oscuro, .7 );
+        border-width: .3em;
+        border-top-width: .2em;
+        background: $blanco;
+        width: 45%;
+
+        img {
+            width: 100%;
+        }
+        h4 {
+            padding-left: 4%;
+            font-size: 0.8em;
+            margin: 0;
+        }
+        button {
+            color: $blanco;
+            font-weight: bold;
+            align-self: flex-end;
+            margin-right: 3%;
+            padding-right: 1.5em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            background-color: $naranja;
+            border: none;
+            background-image: url(#{$rutaImagen}right-arrow.png);
+            background-repeat: no-repeat;
+            background-position: right; 
+        }
     }
 }
 
-.destacado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-    width: 100%;
-    border: 0.3em solid $blanco;
-    $blancoOscuro: darken($blanco, 1%);
-    background-color: $blancoOscuro;
-    img {
-        width: inherit;
-    }
-    h3 {
-        margin: 0;
-        padding-top: .05em;
-        text-align: left;
-        width: inherit;
-        background-color: $blanco;
-    }
-    .descripcion {
-        font-size: 1.05em;
-        margin: 0;
-    }
-    .cajaInformacion {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        $blancoOscuro: darken($blanco, 1%);
-        margin-top: .4em;
-        background-color: $blancoOscuro;
+#cajaAddEvento {
+    color: $blanco;
+    border-radius: 3px;
+    @include columnaMovil;
+    margin-top: 1.7em;
+    margin-bottom: 3em;
+    background-image: url(#{$rutaImagen}forest.png);
+    max-width: 83%;
+    height: 15em;
+    text-align: center;
 
-        address {
-            max-height: 1.2em;
-            padding-bottom: 0.7em;
-            background-color: $blancoOscuro;
-            &::before {
-                content: url(#{$rutaImagen}ubicacion.png);
+    .tituloAnuncio {
+        font-size: 2em;
+        padding-top: 1em;
+        margin-bottom: 0;
+    }
+    .subtituloAnuncio {
+        font-size: 1.7em;
+    }
+    button {
+        font-size: 1.2em;
+        color: inherit;
+        background: transparent;
+        border: $blanco solid 1px;
+        padding-right: 1em;
+        height: 2em;
+        background-image: url(#{$rutaImagen}right-arrow.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: .7em;
+    }
+}
+
+footer {
+    #cajaCategorias {
+        padding-left: 3%;
+        padding-right: 3%;
+        color: lighten($oscuro, 20%);
+        font-size: .95em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #cajaIdiomas {
+        padding: 6%;
+        background-color: $oscuro;
+        color: $blanco;
+        label {
+            background-image: url(#{$rutaImagen}idioma.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 1.2em;
+
+            font-weight: bold;
+            font-size: 0.9em;
+            display: block;
+            padding-left: 1.4em;
+            padding-bottom: .2em;
+            padding-top: .2em;
+        }
+        select {
+            font-size: 1.4em;
+            color: inherit;
+            width: 100%;
+            background: transparent;
+            padding-left: 1em;
+            margin-top: .2em;
+
+            option {
+                background-color: $oscuro;
+                color: $blanco;
             }
         }
-        .cuadroCompra {
-            //padding: 1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 1em;
-            p {
-                margin: 0;
-                font-size: .9em;
-                vertical-align: middle;
+    }
+    #cajaSecciones {
+        background-color: $oscuro;
+        padding-bottom: 2em;
 
-                &::before{
-                    content: url(#{$rutaImagen}calendar.png);
-                    margin-right: .5em;
-                }
-            }
-            button {
-                border: none;
-                background-color: lighten($naranja, 5%);
-                color: $oscuro;
-                padding: .4em;
-                .precio {
-                    font-size: 1.4em;
-                    font-weight: bold;
-                }
+        ul {
+            list-style: none;
+            margin: 0;
+            color: $blanco;
+            
+            li {
+                font-size: 1.2em;
+                line-height: 1.4em;
             }
         }
     }

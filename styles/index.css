@@ -1,8 +1,15 @@
 @import url(https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans);
 body {
+  color: #29241E;
   font-family: "Avenir Next", "Avenir", sans-serif;
   margin: 0px;
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: #fbffe4;
+  background-image: -webkit-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -moz-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -ms-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -o-linear-gradient(top, white, #fbffe4 9%);
+  background-image: linear-gradient(top, white, #fbffe4 9%); }
   body #principalNav {
     display: flex;
     width: 100%;
@@ -151,78 +158,189 @@ body {
       background-repeat: no-repeat;
       background-position: center; }
 
-#contenedorEventos {
-  background-color: #fcffeb;
-  background-image: -webkit-linear-gradient(top, white, #fcffeb 9%);
-  background-image: -moz-linear-gradient(top, white, #fcffeb 9%);
-  background-image: -ms-linear-gradient(top, white, #fcffeb 9%);
-  background-image: -o-linear-gradient(top, white, #fcffeb 9%);
-  background-image: linear-gradient(top, white, #fcffeb 9%); }
+.evento {
+  border: 0.02em solid white; }
+
+h2 {
+  padding-left: 1.5em;
+  padding-top: 0.2em; }
+
+hr {
+  width: 88%; }
 
 #eventosDestacados {
-  height: 2000px;
   background-image: url(../img/star.png);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 2em;
   margin-left: 7%;
   margin-right: 7%; }
-  #eventosDestacados h2 {
-    padding-left: 1.5em;
-    padding-top: 0.2em; }
-
-.destacado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1em;
-  width: 100%;
-  border: 0.3em solid #FEFFF8;
-  background-color: #fdfff3; }
-  .destacado img {
-    width: inherit; }
-  .destacado h3 {
-    margin: 0;
-    padding-top: .05em;
-    text-align: left;
-    width: inherit;
-    background-color: #FEFFF8; }
-  .destacado .descripcion {
-    font-size: 1.05em;
-    margin: 0; }
-  .destacado .cajaInformacion {
-    width: 100%;
+  #eventosDestacados .destacado {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: .4em;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    width: 100%;
     background-color: #fdfff3; }
-    .destacado .cajaInformacion address {
-      max-height: 1.2em;
-      padding-bottom: 0.7em;
-      background-color: #fdfff3; }
-      .destacado .cajaInformacion address::before {
-        content: url(../img/ubicacion.png); }
-    .destacado .cajaInformacion .cuadroCompra {
+    #eventosDestacados .destacado img {
+      width: inherit; }
+    #eventosDestacados .destacado h3 {
+      margin: 0;
+      padding-top: 0.05em;
+      text-align: left;
+      width: inherit;
+      background-color: #FEFFF8; }
+    #eventosDestacados .destacado .descripcion {
+      font-size: 1.05em;
+      margin: 0; }
+    #eventosDestacados .destacado .cajaInformacion {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 1em; }
-      .destacado .cajaInformacion .cuadroCompra p {
-        margin: 0;
-        font-size: .9em;
-        vertical-align: middle; }
-        .destacado .cajaInformacion .cuadroCompra p::before {
-          content: url(../img/calendar.png);
-          margin-right: .5em; }
-      .destacado .cajaInformacion .cuadroCompra button {
-        border: none;
-        background-color: #ea6500;
-        color: #29241E;
-        padding: .4em; }
-        .destacado .cajaInformacion .cuadroCompra button .precio {
-          font-size: 1.4em;
-          font-weight: bold; }
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 0.4em;
+      background-color: #fdfff3; }
+      #eventosDestacados .destacado .cajaInformacion address {
+        max-height: 1.2em;
+        padding-bottom: 0.7em;
+        background-color: #fdfff3; }
+        #eventosDestacados .destacado .cajaInformacion address::before {
+          content: url(../img/ubicacion.png); }
+      #eventosDestacados .destacado .cajaInformacion .cuadroCompra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1em; }
+        #eventosDestacados .destacado .cajaInformacion .cuadroCompra p {
+          margin: 0;
+          font-size: 0.9em;
+          vertical-align: middle; }
+          #eventosDestacados .destacado .cajaInformacion .cuadroCompra p::before {
+            content: url(../img/calendar.png);
+            margin-right: 0.5em; }
+        #eventosDestacados .destacado .cajaInformacion .cuadroCompra button {
+          border: none;
+          background-color: #ea6500;
+          color: #29241E;
+          padding: 0.4em; }
+          #eventosDestacados .destacado .cajaInformacion .cuadroCompra button .precio {
+            font-size: 1.4em;
+            font-weight: bold; }
+
+#eventosRecomendados {
+  background-image: url(../img/recomendado.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 2em;
+  margin-left: 7%;
+  margin-right: 7%; }
+
+#cajaRecomendados {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch; }
+  #cajaRecomendados .evento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-color: rgba(41, 36, 30, 0.7);
+    border-width: .3em;
+    border-top-width: .2em;
+    background: #FEFFF8;
+    width: 45%; }
+    #cajaRecomendados .evento img {
+      width: 100%; }
+    #cajaRecomendados .evento h4 {
+      padding-left: 4%;
+      font-size: 0.8em;
+      margin: 0; }
+    #cajaRecomendados .evento button {
+      color: #FEFFF8;
+      font-weight: bold;
+      align-self: flex-end;
+      margin-right: 3%;
+      padding-right: 1.5em;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      background-color: #D05A00;
+      border: none;
+      background-image: url(../img/right-arrow.png);
+      background-repeat: no-repeat;
+      background-position: right; }
+
+#cajaAddEvento {
+  color: #FEFFF8;
+  border-radius: 3px;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 1.7em;
+  margin-bottom: 3em;
+  background-image: url(../img/forest.png);
+  max-width: 83%;
+  height: 15em;
+  text-align: center; }
+  #cajaAddEvento .tituloAnuncio {
+    font-size: 2em;
+    padding-top: 1em;
+    margin-bottom: 0; }
+  #cajaAddEvento .subtituloAnuncio {
+    font-size: 1.7em; }
+  #cajaAddEvento button {
+    font-size: 1.2em;
+    color: inherit;
+    background: transparent;
+    border: #FEFFF8 solid 1px;
+    padding-right: 1em;
+    height: 2em;
+    background-image: url(../img/right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: .7em; }
+
+footer #cajaCategorias {
+  padding-left: 3%;
+  padding-right: 3%;
+  color: #645849;
+  font-size: .95em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+footer #cajaIdiomas {
+  padding: 6%;
+  background-color: #29241E;
+  color: #FEFFF8; }
+  footer #cajaIdiomas label {
+    background-image: url(../img/idioma.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.2em;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    padding-left: 1.4em;
+    padding-bottom: .2em;
+    padding-top: .2em; }
+  footer #cajaIdiomas select {
+    font-size: 1.4em;
+    color: inherit;
+    width: 100%;
+    background: transparent;
+    padding-left: 1em;
+    margin-top: .2em; }
+    footer #cajaIdiomas select option {
+      background-color: #29241E;
+      color: #FEFFF8; }
+footer #cajaSecciones {
+  background-color: #29241E;
+  padding-bottom: 2em; }
+  footer #cajaSecciones ul {
+    list-style: none;
+    margin: 0;
+    color: #FEFFF8; }
+    footer #cajaSecciones ul li {
+      font-size: 1.2em;
+      line-height: 1.4em; }
 
 /*# sourceMappingURL=index.css.map */
