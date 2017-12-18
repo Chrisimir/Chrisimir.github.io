@@ -27,10 +27,6 @@ body {
     @include cajaAddEvento;
 }
 
-.evento {
-    border: 0.02em solid white;
-}
-
 #eventosDestacados {
     @include imagenInicio(url(#{$rutaImagen}star.png));
     @include columnaMovil;

@@ -8,6 +8,7 @@ body {
     padding-left: 1.5em;
     padding-top: 0.2em; }
   body hr {
+    margin-top: 2em;
     width: 88%; }
   body #precontenido {
     height: 50px; }
@@ -74,7 +75,7 @@ body {
       cursor: pointer;
       opacity: 0;
       /* hide this */
-      z-index: 2;
+      z-index: 3;
       /* and place it over the hamburger */
       -webkit-touch-callout: none; }
     body #principalNav #menuToggle span {
@@ -224,11 +225,10 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-color: rgba(41, 36, 30, 0.7);
-      border-width: .3em;
-      border-top-width: .2em;
       background: #FEFFF8;
-      width: 45%; }
+      margin: 1%;
+      margin-bottom: .7em;
+      flex: 0 0 48%; }
       body #cajaRecomendados .evento img {
         width: 100%; }
       body #cajaRecomendados .evento h4 {
@@ -247,7 +247,8 @@ body {
         border: none;
         background-image: url(../img/right-arrow.png);
         background-repeat: no-repeat;
-        background-position: right; }
+        background-position: 92%;
+        background-size: 1em; }
   body #cajaAddEvento {
     color: #FEFFF8;
     border-radius: 3px;
@@ -256,7 +257,6 @@ body {
     margin-top: 1.7em;
     padding-bottom: .5em;
     background-image: url(../img/forest.png);
-    max-width: 83%;
     height: 15em;
     text-align: center;
     height: 100%; }
@@ -275,11 +275,8 @@ body {
       height: 2em;
       background-image: url(../img/right-arrow.png);
       background-repeat: no-repeat;
-      background-position: right;
+      background-position: 95%;
       background-size: .7em; }
-
-.evento {
-  border: 0.02em solid white; }
 
 #eventosDestacados {
   background-image: url(../img/star.png);
