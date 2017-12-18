@@ -25,6 +25,10 @@ body {
     @include footer;
     @include cajaRecomendados;
     @include cajaAddEvento;
+    a {
+        text-decoration: none;
+        color: $oscuro;
+    }
 }
 
 #eventosDestacados {
