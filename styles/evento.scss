@@ -76,19 +76,33 @@ body {
 }
 
 #descripcion {
+    z-index: -1;
+    line-height: 1.2em;
+    @include columnaMovil;
+
     #tituloDescripcion {
         font-weight: bold;
         line-height: 0;
     }
-    height: 800px;
-    line-height: 1.2em;
-    @include columnaMovil;
+    #textoDescripcion {
+        padding-bottom: 2em;
+    }
 }
 
 #botonComprar {
+    // position: fixed;
+    // bottom: 0;
+    margin-left: 4%;
+    margin-right: 4%;
     position: -webkit-sticky;  // para Safari    
     position: sticky;
-    bottom: 0px;
-    
-    width: 100%;
+    bottom: .2em;
+    height: 3em;
+    width: 92%;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: $blanco;
+    border: none;
+    background-color: $naranja;
+    z-index: -1;
 }

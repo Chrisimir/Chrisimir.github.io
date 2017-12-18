@@ -8,6 +8,7 @@ body {
     padding-left: 1.5em;
     padding-top: 0.2em; }
   body hr {
+    margin-top: 2em;
     width: 88%; }
   body #precontenido {
     height: 50px; }
@@ -74,7 +75,7 @@ body {
       cursor: pointer;
       opacity: 0;
       /* hide this */
-      z-index: 2;
+      z-index: 3;
       /* and place it over the hamburger */
       -webkit-touch-callout: none; }
     body #principalNav #menuToggle span {
@@ -239,18 +240,29 @@ body {
       padding-right: .2em; }
 
 #descripcion {
-  height: 800px;
+  z-index: -1;
   line-height: 1.2em;
   margin-left: 7%;
   margin-right: 7%; }
   #descripcion #tituloDescripcion {
     font-weight: bold;
     line-height: 0; }
+  #descripcion #textoDescripcion {
+    padding-bottom: 2em; }
 
 #botonComprar {
+  margin-left: 4%;
+  margin-right: 4%;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0px;
-  width: 100%; }
+  bottom: .2em;
+  height: 3em;
+  width: 92%;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #FEFFF8;
+  border: none;
+  background-color: #D05A00;
+  z-index: -1; }
 
 /*# sourceMappingURL=evento.css.map */
