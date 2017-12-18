@@ -1,0 +1,53 @@
+@import url(https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans);
+$open-sans: "Open Sans", sans-serif;
+
+@mixin roundedImage {
+  border-radius: 50%;
+}
+
+@mixin nav {
+  $navHeight: 50px;
+  #principalNav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: $blanco;
+    justify-content: space-between;
+    position: fixed;
+    height: $navHeight;
+    @include burgerBtn;
+    a {
+      transition: color 0.3s ease;
+      &:hover {
+        color: tomato;
+      }
+    }
+  }
+
+  h1 {
+    color: #cc0000;
+    font-family: $open-sans;
+  }
+
+  #btnPerfil {
+    color: #232323;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    max-height: 100%;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+
+    img {
+      @include roundedImage;
+      height: 33px;
+    }
+    p {
+      line-height: 0px;
+      margin-top: 6px;
+      font-size: 0.7em;
+      color: $oscuro;
+    }
+  }
+}

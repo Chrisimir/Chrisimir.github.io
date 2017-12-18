@@ -1,0 +1,9 @@
+@mixin fondoPrincipal {
+    $blancoOscurecido: darken($blanco, 4%);
+    background-color: $blancoOscurecido;
+    background-image: -webkit-linear-gradient(top, white, $blancoOscurecido 9%);
+    background-image: -moz-linear-gradient(top, white, $blancoOscurecido 9%);
+    background-image: -ms-linear-gradient(top, white, $blancoOscurecido 9%);
+    background-image: -o-linear-gradient(top, white, $blancoOscurecido 9%);
+    background-image: linear-gradient(top, white, $blancoOscurecido 9%);
+}

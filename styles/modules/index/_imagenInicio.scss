@@ -1,0 +1,6 @@
+@mixin imagenInicio($url) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-position: top left; 
+    background-size: 2em;
+}

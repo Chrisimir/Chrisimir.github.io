@@ -4,60 +4,34 @@ $naranja: #D05A00;
 $oscuro: #29241E;
 $blanco: #FEFFF8;
 
-@import "modules/burger";
-@import "modules/nav";
-@import "modules/cajaBusqueda";
-@import "modules/eventoDestacado";
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/cajaAddEvento";
 
-@mixin roundedImage {
-    border-radius: 50%;
-}
-@mixin imagenInicio($url) {
-    background-image: $url;
-    background-repeat: no-repeat;
-    background-position: top left; 
-    background-size: 2em;
-}
-@mixin columnaMovil {
-    margin-left: 7%;
-    margin-right: 7%;
-}
-@mixin fondoPincipal {
-    $blancoOscurecido: darken($blanco, 4%);
-    background-color: $blancoOscurecido;
-    background-image: -webkit-linear-gradient(top, white, $blancoOscurecido 9%);
-    background-image: -moz-linear-gradient(top, white, $blancoOscurecido 9%);
-    background-image: -ms-linear-gradient(top, white, $blancoOscurecido 9%);
-    background-image: -o-linear-gradient(top, white, $blancoOscurecido 9%);
-    background-image: linear-gradient(top, white, $blancoOscurecido 9%);
-}
+@import "./modules/index/cajaBusqueda";
+@import "./modules/index/eventoDestacado";
+@import "./modules/index/imagenInicio";
+@import "./modules/index/cajaRecomendados";
+
 
 body {
-    color: $oscuro;
-    font-family: "Avenir Next", "Avenir", sans-serif;
-    margin: 0px;
-    max-width: 100%;
     @include nav;
     @include cajaBusqueda;
-    @include fondoPincipal;
+    @include fondoPrincipal;
+    @include footer;
+    @include cajaRecomendados;
+    @include cajaAddEvento;
 }
 
 .evento {
     border: 0.02em solid white;
 }
 
-// Título de los tipos de eventos
-h2 {
-    padding-left: 1.5em;
-    padding-top: 0.2em;
-}
-
-hr {
-    width: 88%;
-}
-
 #eventosDestacados {
-    //height: 2000px;
     @include imagenInicio(url(#{$rutaImagen}star.png));
     @include columnaMovil;
     @include eventoDestacado;
@@ -66,137 +40,4 @@ hr {
 #eventosRecomendados {
     @include imagenInicio(url(#{$rutaImagen}recomendado.png));
     @include columnaMovil;
-}
-
-#cajaRecomendados {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-
-    .evento {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-color: rgba( $oscuro, .7 );
-        border-width: .3em;
-        border-top-width: .2em;
-        background: $blanco;
-        width: 45%;
-
-        img {
-            width: 100%;
-        }
-        h4 {
-            padding-left: 4%;
-            font-size: 0.8em;
-            margin: 0;
-        }
-        button {
-            color: $blanco;
-            font-weight: bold;
-            align-self: flex-end;
-            margin-right: 3%;
-            padding-right: 1.5em;
-            padding-top: .5em;
-            padding-bottom: .5em;
-            background-color: $naranja;
-            border: none;
-            background-image: url(#{$rutaImagen}right-arrow.png);
-            background-repeat: no-repeat;
-            background-position: right; 
-        }
-    }
-}
-
-#cajaAddEvento {
-    color: $blanco;
-    border-radius: 3px;
-    @include columnaMovil;
-    margin-top: 1.7em;
-    padding-bottom: .5em;
-    background-image: url(#{$rutaImagen}forest.png);
-    max-width: 83%;
-    height: 15em;
-    text-align: center;
-    height: 100%;
-
-    .tituloAnuncio {
-        font-size: 2em;
-        padding-top: 1em;
-        margin-bottom: 0;
-    }
-    .subtituloAnuncio {
-        font-size: 1.7em;
-    }
-    button {
-        font-size: 1.2em;
-        color: inherit;
-        background: transparent;
-        border: $blanco solid 1px;
-        padding-right: 1em;
-        height: 2em;
-        background-image: url(#{$rutaImagen}right-arrow.png);
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: .7em;
-    }
-}
-
-footer {
-    #cajaCategorias {
-        padding-left: 3%;
-        padding-right: 3%;
-        color: lighten($oscuro, 20%);
-        font-size: .95em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    #cajaIdiomas {
-        padding: 6%;
-        background-color: $oscuro;
-        color: $blanco;
-        label {
-            background-image: url(#{$rutaImagen}idioma.png);
-            background-repeat: no-repeat;
-            background-position: left;
-            background-size: 1.2em;
-
-            font-weight: bold;
-            font-size: 0.9em;
-            display: block;
-            padding-left: 1.4em;
-            padding-bottom: .2em;
-            padding-top: .2em;
-        }
-        select {
-            font-size: 1.4em;
-            color: inherit;
-            width: 100%;
-            background: transparent;
-            padding-left: 1em;
-            margin-top: .2em;
-
-            option {
-                background-color: $oscuro;
-                color: $blanco;
-            }
-        }
-    }
-    #cajaSecciones {
-        background-color: $oscuro;
-        padding-bottom: 2em;
-
-        ul {
-            list-style: none;
-            margin: 0;
-            color: $blanco;
-            
-            li {
-                font-size: 1.2em;
-                line-height: 1.4em;
-            }
-        }
-    }
 }

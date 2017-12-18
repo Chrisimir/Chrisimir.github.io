@@ -1,0 +1,20 @@
+body {
+  color: $oscuro;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  margin: 0px;
+  max-width: 100%;
+
+  // Título de los tipos de eventos
+  h2 {
+    padding-left: 1.5em;
+    padding-top: 0.2em;
+  }
+
+  hr {
+    width: 88%;
+  }
+
+  #precontenido {
+      height: 50px;
+  }
+}

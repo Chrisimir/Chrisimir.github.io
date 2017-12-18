@@ -1,0 +1,59 @@
+@mixin footer {
+    footer {
+        #cajaCategorias {
+            padding-left: 3%;
+            padding-right: 3%;
+            color: lighten($oscuro, 20%);
+            font-size: .95em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        #cajaIdiomas {
+            padding: 6%;
+            background-color: $oscuro;
+            color: $blanco;
+            label {
+                background-image: url(#{$rutaImagen}idioma.png);
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 1.2em;
+    
+                font-weight: bold;
+                font-size: 0.9em;
+                display: block;
+                padding-left: 1.4em;
+                padding-bottom: .2em;
+                padding-top: .2em;
+            }
+            select {
+                font-size: 1.4em;
+                color: inherit;
+                width: 100%;
+                background: transparent;
+                padding-left: 1em;
+                margin-top: .2em;
+    
+                option {
+                    background-color: $oscuro;
+                    color: $blanco;
+                }
+            }
+        }
+        #cajaSecciones {
+            background-color: $oscuro;
+            padding-bottom: 2em;
+    
+            ul {
+                list-style: none;
+                margin: 0;
+                color: $blanco;
+                
+                li {
+                    font-size: 1.2em;
+                    line-height: 1.4em;
+                }
+            }
+        }
+    }
+}
