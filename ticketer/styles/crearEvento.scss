@@ -1,0 +1,67 @@
+// Variables
+$rutaImagen: "../img/";
+$naranja: #d05a00;
+$oscuro: #29241e;
+$blanco: #fefff8;
+
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/inputs";
+
+body {
+  @include nav;
+  @include fondoPrincipal;
+  @include footer;
+}
+
+#cajaCreacion {
+  @include columnaMovil;
+
+  form {
+    font-size: 1.12em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      margin-top: 0.7em;
+    }
+    label {
+        padding-top: .2em;
+    }
+    input {
+      @include inputs;
+    }
+    select {
+        @include inputs;
+        background: #fefff8;
+    }
+    #fecha {
+        @include inputs;
+        background: #fefff8;
+    }
+    textarea {
+        @include inputs;
+        font-size: 1.15em;
+    }
+    #btnAddFoto {
+        width: 3em;
+        height: 3em;
+    }
+    #btnPublicar {
+      margin-top: 1.1em;
+      margin-bottom: 1em;
+      color: $blanco;
+      font-weight: bold;
+      background-color: lighten($naranja, 10%);
+      border: none;
+    }
+    
+  }
+}

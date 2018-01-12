@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Ticketer</title>
+</head>
+
+<body>
+    <nav id="principalNav">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Info</li>
+                </a>
+            </ul>
+        </div>
+        <h1>Ticketer</h1>
+        <a href="" id="btnPerfil">
+            <img src="img/cara.png" alt="avatar">
+            <p>Chris L.</p>
+        </a>
+    </nav>
+
+    <div id="precontenido"></div>
+
+    <form action="Submit" class="cajaBuscar">
+        <input type="text" placeholder="Busca eventos..." name="search">
+        <button type="button"></button>
+    </form>
+
+    <div id="contenedorEventos">
+        <div id="eventosDestacados">
+            <h2>Eventos destacados</h2>
+            <div id="cajaDestacados">
+                <a href="./evento.html">
+                    <div class="evento destacado">
+                        <img src="./img/festival-low.png" alt="evento">
+                        <h3>Low festival Benidorm 2018</h3>
+                        <p class="descripcion">Low Festival se prepara para celebrar su décimo aniversario en 2018.</p>
+                        <div class="cajaInformacion">
+                            <address>Benidorm</address>
+                            <div class="cuadroCompra">
+                                <p>8/6/18</p>
+                                <button type="button">Desde:
+                                    <span class="precio">25€</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./evento.html">
+                    <div class="evento destacado">
+                        <img src="./img/concierto-belako.jpg" alt="evento">
+                        <h3>Belako en concierto</h3>
+                        <p class="descripcion">Belako vuelve con un disco nuevo, más fuerte que nunca.</p>
+                        <div class="cajaInformacion">
+                            <address>Almusafes</address>
+                            <div class="cuadroCompra">
+                                <p>5/12/19</p>
+                                <button type="button">Desde:
+                                    <span class="precio">40€</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="eventosRecomendados">
+            <h2>Eventos recomendados</h2>
+            <div id="cajaRecomendados">
+                <a href="./evento.html" class="evento">
+                    <img src="./img/tropetera.jpg" alt="evento">
+                    <h4>Trompetera Festival</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/concierto-belako.jpg" alt="evento">
+                    <h4>Belako en concierto</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/vintagetrouble.jpg" alt="evento">
+                    <h4>Vintage trouble en concierto</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/tropetera.jpg" alt="evento">
+                    <h4>Trompetera Festival</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/concierto-belako.jpg" alt="evento">
+                    <h4>Belako en concierto</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/tropetera.jpg" alt="evento">
+                    <h4>Trompetera Festival</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/tropetera.jpg" alt="evento">
+                    <h4>Trompetera Festival</h4>
+                    <button type="button">Ver</button>
+                </a>
+                <a href="./evento.html" class="evento">
+                    <img src="./img/vintagetrouble.jpg" alt="evento">
+                    <h4>Vintage trouble en concierto</h4>
+                    <button type="button">Ver</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="cajaAddEvento">
+        <p class="tituloAnuncio">¿Organizas eventos?</p>
+        <p class="subtituloAnuncio">Crea un evento en Ticketer</p>
+        <button type="button">Crear</button>
+    </div>
+    <hr>
+    <footer>
+        <div id="cajaCategorias">
+            <p>Conciertos</p>
+            <p>Festivales</p>
+            <p>Teatro</p>
+            <p>Exposiciones</p>
+            <p>Artes escénicas</p>
+            <p>Profesional</p>
+        </div>
+        <div id="cajaIdiomas">
+            <label for="idioma">Idiomas</label>
+            <select name="idioma" id="idioma">
+                <option value="en">English</option>
+                <option value="es" selected="selected">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div id="cajaSecciones">
+            <ul>
+                <li>Sobre nosotros</li>
+                <li>Vender entradas</li>
+                <li>Redes sociales</li>
+                <li>Ayuda</li>
+            </ul>
+        </div>
+       
+    </footer>
+</body>
+
+</html>

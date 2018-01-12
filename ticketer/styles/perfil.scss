@@ -1,0 +1,56 @@
+// Variables
+$rutaImagen: "../img/";
+$naranja: #d05a00;
+$oscuro: #29241e;
+$blanco: #fefff8;
+
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/cajaAddEvento";
+
+body {
+  @include nav;
+  @include fondoPrincipal;
+  @include footer;
+}
+
+#cajaPerfil {
+  @include columnaMovil;
+margin-top: 1em;
+  form {
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+
+    .avatarPreview {
+        text-align: center;
+      img {
+        @include roundedImage;
+        height: 7em;
+        width: 7em;
+      }
+      p {
+          margin: 0;
+          margin-top: -0.5em;
+          font-size: .9em;
+      }
+    }
+    input {
+      padding: 0.4em;
+      margin: 0.1em;
+      font-size: 1.2em;
+    }
+    #btnCambiarDatos {
+      margin-top: 0.4em;
+      color: $blanco;
+      font-weight: bold;
+      background-color: lighten($naranja, 10%);
+      border: none;
+    }
+  }
+}

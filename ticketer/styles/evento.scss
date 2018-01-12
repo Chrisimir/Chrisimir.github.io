@@ -1,0 +1,108 @@
+// Variables
+$rutaImagen: "../img/";
+$naranja: #D05A00;
+$oscuro: #29241E;
+$blanco: #FEFFF8;
+
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/cajaAddEvento";
+
+
+body {
+    @include nav;
+    @include fondoPrincipal;
+    @include footer;
+}
+
+#evento {
+    display: flex;
+    flex-direction: column;
+    color: $oscuro;
+}
+
+#tituloEvento {
+    height: 8em;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(#{$rutaImagen}concierto-belako.jpg);
+    background-position: center top;
+    background-size: 100%;
+    color: $blanco;
+    padding-top: 4em;
+    h1 {
+        color: inherit;
+        text-align: center;
+        text-shadow:
+        -1px -1px 0 $oscuro,
+        1px -1px 0 $oscuro,
+        -1px 1px 0 $oscuro,
+        1px 1px 0 $oscuro;
+    }
+}
+
+#infoResumida {
+    padding-left: 2em;
+    padding-top: .7em;
+    padding-bottom: .5em;
+    border-radius: 5px;
+    background: $blanco;
+
+    @mixin elementoInformacion($url) {
+        margin-bottom: .5em;
+        &::before {
+          content: url(#{$rutaImagen}#{$url});
+          padding-right: .2em;
+        }
+    }
+
+    .tituloCaja {
+        font-weight: bold;
+        font-size: .9em;
+        padding-bottom: .5em;
+    }
+    #fecha {
+        @include elementoInformacion("calendar.png")
+    }
+    #precio {
+        @include elementoInformacion("euro.png");
+    }
+    #direccion {
+        @include elementoInformacion("ubicacioon.png");
+    }
+}
+
+#descripcion {
+    z-index: -1;
+    line-height: 1.2em;
+    @include columnaMovil;
+
+    #tituloDescripcion {
+        font-weight: bold;
+        line-height: 0;
+    }
+    #textoDescripcion {
+        padding-bottom: 2em;
+    }
+}
+
+#botonComprar {
+    // position: fixed;
+    // bottom: 0;
+    margin-left: 4%;
+    margin-right: 4%;
+    position: -webkit-sticky;  // para Safari    
+    position: sticky;
+    bottom: .2em;
+    height: 3em;
+    width: 92%;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: $blanco;
+    border: none;
+    background-color: $naranja;
+    z-index: -1;
+}

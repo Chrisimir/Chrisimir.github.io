@@ -1,0 +1,36 @@
+@import "./columnaMovil";
+
+@mixin cajaAddEvento {
+    #cajaAddEvento {
+        color: $blanco;
+        border-radius: 3px;
+        @include columnaMovil;
+        margin-top: 1.7em;
+        padding-bottom: .5em;
+        background-image: url(#{$rutaImagen}forest.png);
+        height: 15em;
+        text-align: center;
+        height: 100%;
+    
+        .tituloAnuncio {
+            font-size: 2em;
+            padding-top: 1em;
+            margin-bottom: 0;
+        }
+        .subtituloAnuncio {
+            font-size: 1.7em;
+        }
+        button {
+            font-size: 1.2em;
+            color: inherit;
+            background: transparent;
+            border: $blanco solid 1px;
+            padding-right: 1em;
+            height: 2em;
+            background-image: url(#{$rutaImagen}right-arrow.png);
+            background-repeat: no-repeat;
+            background-position: 95%;
+            background-size: .7em;
+        }
+    }
+}

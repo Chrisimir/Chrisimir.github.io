@@ -1,0 +1,268 @@
+@import url(https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans);
+body {
+  color: #29241E;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  margin: 0px;
+  max-width: 100%; }
+  body h2 {
+    padding-left: 1.5em;
+    padding-top: 0.2em; }
+  body hr {
+    margin-top: 2em;
+    width: 88%; }
+  body #precontenido {
+    height: 50px; }
+
+body {
+  background-color: #fbffe4;
+  background-image: -webkit-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -moz-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -ms-linear-gradient(top, white, #fbffe4 9%);
+  background-image: -o-linear-gradient(top, white, #fbffe4 9%);
+  background-image: linear-gradient(top, white, #fbffe4 9%); }
+  body #principalNav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #FEFFF8;
+    justify-content: space-between;
+    position: fixed;
+    height: 50px;
+   /*
+* Made by Erik Terwan
+* 24th of November 2015
+* All rights reserved
+*
+*
+* If you are thinking of using this in
+* production code, beware of the browser
+* prefixes.
+*/
+    /*
+     * Just a quick hamburger
+     */
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    /*
+     * But let's hide the middle one.
+     */
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    /*
+     * And let's slide it in from the left
+     */ }
+    body #principalNav #menuToggle {
+      padding-left: .5em;
+      display: block;
+      position: relative;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none; }
+    body #principalNav #menuToggle input {
+      display: block;
+      width: 4em;
+      height: 3em;
+      position: absolute;
+      top: -.6em;
+      left: -.4em;
+      cursor: pointer;
+      opacity: 0;
+      /* hide this */
+      z-index: 3;
+      /* and place it over the hamburger */
+      -webkit-touch-callout: none; }
+    body #principalNav #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #29241E;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+    body #principalNav z
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%; }
+    body #principalNav #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%; }
+    body #principalNav #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+      background-color: #FEFFF8; }
+    body #principalNav #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2); }
+    body #principalNav #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+      background-color: #FEFFF8; }
+    body #principalNav #menu {
+      position: absolute;
+      width: 11em;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      height: 10000px;
+      background: #29241E;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+      border: white solid .1em; }
+    body #principalNav #menu li {
+      padding: 10px 0;
+      font-size: 22px;
+      color: #FEFFF8; }
+    body #principalNav #menuToggle input:checked ~ ul {
+      transform: none;
+      color: #FEFFF8; }
+    body #principalNav a {
+      transition: color 0.3s ease; }
+      body #principalNav a:hover {
+        color: tomato; }
+  body h1 {
+    color: #cc0000;
+    font-family: "Open Sans", sans-serif; }
+  body #btnPerfil {
+    color: #232323;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    max-height: 100%;
+    margin-right: 0.5em;
+    margin-top: 0.2em; }
+    body #btnPerfil img {
+      border-radius: 50%;
+      height: 33px; }
+    body #btnPerfil p {
+      line-height: 0px;
+      margin-top: 6px;
+      font-size: 0.7em;
+      color: #29241E; }
+  body footer #cajaCategorias {
+    padding-left: 3%;
+    padding-right: 3%;
+    color: #645849;
+    font-size: .95em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body footer #cajaIdiomas {
+    padding: 6%;
+    background-color: #29241E;
+    color: #FEFFF8; }
+    body footer #cajaIdiomas label {
+      background-image: url(../img/idioma.png);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 1.2em;
+      font-weight: bold;
+      font-size: 0.9em;
+      display: block;
+      padding-left: 1.4em;
+      padding-bottom: .2em;
+      padding-top: .2em; }
+    body footer #cajaIdiomas select {
+      font-size: 1.4em;
+      color: inherit;
+      width: 100%;
+      background: transparent;
+      padding-left: 1em;
+      margin-top: .2em; }
+      body footer #cajaIdiomas select option {
+        background-color: #29241E;
+        color: #FEFFF8; }
+  body footer #cajaSecciones {
+    background-color: #29241E;
+    padding-bottom: 2em; }
+    body footer #cajaSecciones ul {
+      list-style: none;
+      margin: 0;
+      color: #FEFFF8; }
+      body footer #cajaSecciones ul li {
+        font-size: 1.2em;
+        line-height: 1.4em; }
+
+#evento {
+  display: flex;
+  flex-direction: column;
+  color: #29241E; }
+
+#tituloEvento {
+  height: 8em;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/concierto-belako.jpg);
+  background-position: center top;
+  background-size: 100%;
+  color: #FEFFF8;
+  padding-top: 4em; }
+  #tituloEvento h1 {
+    color: inherit;
+    text-align: center;
+    text-shadow: -1px -1px 0 #29241E, 1px -1px 0 #29241E, -1px 1px 0 #29241E, 1px 1px 0 #29241E; }
+
+#infoResumida {
+  padding-left: 2em;
+  padding-top: .7em;
+  padding-bottom: .5em;
+  border-radius: 5px;
+  background: #FEFFF8; }
+  #infoResumida .tituloCaja {
+    font-weight: bold;
+    font-size: .9em;
+    padding-bottom: .5em; }
+  #infoResumida #fecha {
+    margin-bottom: .5em; }
+    #infoResumida #fecha::before {
+      content: url(../img/calendar.png);
+      padding-right: .2em; }
+  #infoResumida #precio {
+    margin-bottom: .5em; }
+    #infoResumida #precio::before {
+      content: url(../img/euro.png);
+      padding-right: .2em; }
+  #infoResumida #direccion {
+    margin-bottom: .5em; }
+    #infoResumida #direccion::before {
+      content: url(../img/ubicacioon.png);
+      padding-right: .2em; }
+
+#descripcion {
+  z-index: -1;
+  line-height: 1.2em;
+  margin-left: 7%;
+  margin-right: 7%; }
+  #descripcion #tituloDescripcion {
+    font-weight: bold;
+    line-height: 0; }
+  #descripcion #textoDescripcion {
+    padding-bottom: 2em; }
+
+#botonComprar {
+  margin-left: 4%;
+  margin-right: 4%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: .2em;
+  height: 3em;
+  width: 92%;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #FEFFF8;
+  border: none;
+  background-color: #D05A00;
+  z-index: -1; }
+
+/*# sourceMappingURL=evento.css.map */

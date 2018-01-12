@@ -1,0 +1,43 @@
+@mixin cajaRecomendados {
+    #cajaRecomendados {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    
+        .evento {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: $blanco;
+            margin: 1%;
+            margin-bottom: .7em;
+            flex: 0 0 48%;
+            //width: 50%;
+    
+            img {
+                width: 100%;
+            }
+            h4 {
+                padding-left: 4%;
+                font-size: 0.8em;
+                margin: 0;
+            }
+            button {
+                color: $blanco;
+                font-weight: bold;
+                align-self: flex-end;
+                margin-right: 3%;
+                padding-right: 1.5em;
+                padding-top: .5em;
+                padding-bottom: .5em;
+                background-color: $naranja;
+                border: none;
+                background-image: url(#{$rutaImagen}right-arrow.png);
+                background-repeat: no-repeat;
+                background-position: 92%;
+                background-size: 1em;
+            }
+        }
+    }
+}

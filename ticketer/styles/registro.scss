@@ -1,0 +1,82 @@
+// Variables
+$rutaImagen: "../img/";
+$naranja: #d05a00;
+$oscuro: #29241e;
+$blanco: #fefff8;
+
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/cajaAddEvento";
+
+body {
+  @include nav;
+  @include fondoPrincipal;
+  @include footer;
+}
+
+#cajaDescripcionCuenta {
+  .texto {
+    @include columnaMovil;
+  }
+  margin-bottom: 1em;
+  color: $blanco;
+  background-image: url(#{$rutaImagen}forest.png);
+  padding: 0.4em;
+  .titulo {
+    font-weight: bold;
+    text-align: center;
+  }
+  p {
+    margin: 0.4em;
+  }
+}
+
+#cajaRegistro {
+  @include columnaMovil;
+
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  margin-left: auto;
+  margin-right: auto;
+
+  #btnTenerCuenta {
+    color: $blanco;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: $naranja;
+    border: none;
+    background-image: url(#{$rutaImagen}right-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 92%;
+    background-size: 1em;
+  }
+  form {
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    
+    input {
+      padding: 0.4em;
+      margin: 0.1em;
+      font-size: 1.2em;
+    }
+    #btnRegistro {
+      margin-top: 0.4em;
+      color: $blanco;
+      font-weight: bold;
+      background-color: lighten($naranja, 10%);
+      border: none;
+    }
+  }
+}

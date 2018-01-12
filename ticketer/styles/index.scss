@@ -1,0 +1,43 @@
+// Variables
+$rutaImagen: "../img/";
+$naranja: #D05A00;
+$oscuro: #29241E;
+$blanco: #FEFFF8;
+
+@import "./modules/shared/burger";
+@import "./modules/shared/nav";
+@import "./modules/shared/footer";
+@import "./modules/shared/columnaMovil";
+@import "./modules/shared/fondoPrincipal";
+@import "./modules/shared/body";
+@import "./modules/shared/cajaAddEvento";
+
+@import "./modules/index/cajaBusqueda";
+@import "./modules/index/eventoDestacado";
+@import "./modules/index/imagenInicio";
+@import "./modules/index/cajaRecomendados";
+
+
+body {
+    @include nav;
+    @include cajaBusqueda;
+    @include fondoPrincipal;
+    @include footer;
+    @include cajaRecomendados;
+    @include cajaAddEvento;
+    a {
+        text-decoration: none;
+        color: $oscuro;
+    }
+}
+
+#eventosDestacados {
+    @include imagenInicio(url(#{$rutaImagen}star.png));
+    @include columnaMovil;
+    @include eventoDestacado;
+}
+
+#eventosRecomendados {
+    @include imagenInicio(url(#{$rutaImagen}recomendado.png));
+    @include columnaMovil;
+}

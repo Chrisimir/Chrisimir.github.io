@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/comprarEntrada.css">
+
+    <title>Ticketer</title>
+</head>
+
+<body>
+    <nav id="principalNav">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Info</li>
+                </a>
+            </ul>
+        </div>
+        <h1>Ticketer</h1>
+        <a href="" id="btnPerfil">
+            <img src="img/cara.png" alt="avatar">
+            <p>Chris L.</p>
+        </a>
+    </nav>
+
+    <div id="precontenido"></div>
+
+    <div id="infoResumida">
+        <div id="info">
+            <div id="textoInfo">
+                <div id="fecha">5/12/19</div>
+                <div id="precio">40€</div>
+                <div id="direccion">Almusafes</div>
+            </div>
+            <div id="imgInfo">
+                <div id="titulo">Belako en concierto adsdsadsada</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cajaInteraccionCompra">
+        <div id="cajaDeCompra">
+            <h3>Cantidad</h3>
+            <select id="cantidad">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div id="pago">
+            <h3>Método de pago</h3>
+            <div class="metodos">
+                <input type="image" id="mastercard" src="img/mastercard.png">
+                <input type="image" id="visa" src="img/visa.png">
+                <input type="image" id="paypal" src="img/paypal.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="resumen">
+        <p id="articulo">1 x Belako en concierto</p>
+        <div id="datosPrecio">
+            <div class="elementoPrecio">
+                <label for="precioNoIVA">Precio:</label>
+                <p id="precioNoIVA">40€</p>
+            </div>
+            <div class="elementoPrecio">
+                <label for="iva">IVA:</label>
+                <p id="iva">0,80€</p>
+            </div>
+            <div class="elementoPrecio">
+                <label for="total">Total:</label>
+                <p id="total">40,80€</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="cajaIdiomas">
+            <label for="idioma">Idiomas</label>
+            <select id="idioma">
+                <option value="en">English</option>
+                <option value="es" selected="selected">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div id="cajaSecciones">
+            <ul>
+                <li>Sobre nosotros</li>
+                <li>Vender entradas</li>
+                <li>Redes sociales</li>
+                <li>Contacto</li>
+                <li>Ayuda</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
